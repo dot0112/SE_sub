@@ -11,35 +11,49 @@ function App() {
     return 1;
   }
 
-  let [글제목, 글제목변경] = useState(['test state', 'ㅁㄴㄹ', 'ㅂㄷㅈㄱ']);
-  let [글제목2, 글제목2변경] = useState('글제목2');
-  let [글제목3, 글제목3변경] = useState('글제목3');
+  let [글제목, 글제목변경] = useState(['test state', 'asdf', 'qwer']);
 
   let [좋아요수, 좋아요수변경] = useState(0);
+
+  function 제목변경() {
+    var temp글제목 = [...글제목];
+    글제목변경(temp글제목.sort());
+  }
 
   return (
     <div className="App">
       <div className="black-nav">
         <div style={testStyle}>테스트 중</div>
       </div>
-      <button onClick={() => { 글제목변경(글제목 = 'change title') }}>btn</button>
+      <button onClick={제목변경}>btn</button>
       <div className="list">
-        <h3>{글제목}<span onClick={() => { 좋아요수변경(좋아요수 + 1) }}>👍</span>{좋아요수}</h3>
+        <h3>{글제목[0]}<span onClick={() => { 좋아요수변경(좋아요수 + 1) }}>👍</span>{좋아요수}</h3>
         <p>4월 2일 test</p>
         <hr />
       </div>
       <div className="list">
-        <h3>{글제목2}</h3>
+        <h3>{글제목[1]}</h3>
         <p>4월 8일 test</p>
         <hr />
       </div>
       <div className="list">
-        <h3>{글제목3}</h3>
+        <h3>{글제목[2]}</h3>
         <p>4월 16일 test</p>
         <hr />
       </div>
+
+      <Modal />
+
     </div>
   );
+}
+
+function Modal() {
+  return (<div className='modal'>
+    <h2>제목</h2>
+    <p>날짜</p>
+    <p>상세내용</p>
+  </div>);
 }
 
 export default App;
