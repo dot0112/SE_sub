@@ -1,0 +1,65 @@
+.App {
+    display: flex;
+    flex-direction: column;
+    /* 자식 요소들을 수직 방향으로 정렬 */
+    justify-content: flex-start;
+    /* 자식 요소들을 컨테이너의 시작점부터 정렬 */
+    align-items: center;
+    /* 가로 중앙 정렬 */
+    width: 100%;
+}
+
+.black-nav {
+    background: black;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding: 60px 0 30px 150px;
+    /* 축약형 패딩 설정 */
+    font-weight: 600;
+    font-size: 40px;
+    text-align: left;
+}
+
+.searchContainer {
+    display: flex;
+    margin-top: 30px;
+}
+
+.textInput {
+    font-size: 20px;
+    height: 40px;
+    width: 90%;
+    align-self: flex-start;
+}
+
+.searchButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.searchButton img {
+    filter: invert(100%);
+    margin-left: 10px;
+    width: 40px;
+    height: 40px;
+}
+
+.itemBox {
+    padding: 120px;
+    font-size: 10px;
+}
+
+.grid-container {
+    width: 100%;
+    /* 그리드 컨테이너 전체 너비 사용 */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    /* 각 그리드 항목의 최소 너비를 150px로 설정하고 가능한 많이 채움 */
+    grid-gap: 100px;
+    /* 그리드 항목 사이의 간격 */
+    padding: 20px;
+    /* 컨테이너 패딩 */
+}
