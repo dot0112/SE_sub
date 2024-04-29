@@ -1,12 +1,12 @@
 /* eslint-disable */
 import { useState } from 'react';
 import './styles/main.css';
-import TextInput from './components/textInput';
-import SearchButton from './components/searchButton';
-import ItemBox from './components/ItemBox';
+import TextInput from './components/TextInput';
+import SearchButton from './components/SearchButton';
+import ItemList from './components/ItemList';
 
 function Main() {
-
+    const [page, setPage] = useState(1);
     const [inputValue, setInputValue] = useState("");
 
     const handleInputChange = (event) => {
@@ -26,12 +26,7 @@ function Main() {
                     <SearchButton onClick={handleSearch} />
                 </div>
             </div>
-            <div className="grid-container">
-                <ItemBox itemNum={1} />
-                <ItemBox itemNum={2} />
-                <ItemBox itemNum={3} />
-                {/* 더 많은 ItemBox 컴포넌트를 추가할 수 있습니다 */}
-            </div>
+            <ItemList pageNum={page} />
         </div>
     );
 }

@@ -48,18 +48,39 @@
 }
 
 .itemBox {
-    padding: 120px;
-    font-size: 10px;
+    padding: 10px;
+    width: 290px;
+    height: 430px;
+
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    /* 부드러운 색상 전환 효과 */
+}
+
+.itemBox:hover {
+    background-color: gray;
+    /* Darker green */
+}
+
+.itemBox h1 {
+    font-weight: normal;
+}
+
+.itemBox h3 {
+    font-weight: normal;
 }
 
 .grid-container {
     width: 100%;
     /* 그리드 컨테이너 전체 너비 사용 */
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(290px, 0fr));
     /* 각 그리드 항목의 최소 너비를 150px로 설정하고 가능한 많이 채움 */
-    grid-gap: 100px;
+    grid-gap: 20px;
     /* 그리드 항목 사이의 간격 */
     padding: 20px;
     /* 컨테이너 패딩 */
+    margin: 40px auto;
 }
