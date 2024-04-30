@@ -47,6 +47,27 @@
     height: 40px;
 }
 
+.pageButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.pageButton img {
+    width: 70px;
+    height: 70px;
+    transition: filter 0.3s ease;
+}
+
+.pageButton:hover img {
+    filter: invert(50%);
+}
+
+.pageButton:active img {
+    transition: filter 0.1s ease;
+    filter: invert(80%);
+}
+
 .itemBox {
     padding: 10px;
     width: 290px;
@@ -55,13 +76,18 @@
     background-color: white;
     color: black;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease;
     /* 부드러운 색상 전환 효과 */
 }
 
 .itemBox:hover {
     background-color: gray;
     /* Darker green */
+}
+
+.itemBox:active {
+    transition: background-color 0.2s ease;
+    background-color: #A0A0A0;
 }
 
 .itemBox h1 {
