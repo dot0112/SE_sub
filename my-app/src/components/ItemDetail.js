@@ -8,12 +8,17 @@ function ItemDetail({ itemNum, modalOpen, setModalOpen }) {
         modalOpen &&
         <div className={'modal-container'} >
             <div className={'modal-content'}>
-                <p>리액트로 모달 구현하기</p>
-                <button className={'modal-close-btn'} onClick={() => setModalOpen(false)}>
-                    모달 닫기
-                </button>
+                <div className={'modal-content-grid'}>
+                    <img src="logo192.png" alt={itemNum} style={{ width: "700px" }} />
+                    <div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <button onClick={() => setModalOpen(false)}>닫기</button>
+                    </div>
+                </div>
             </div>
-        </div>
+        </div >
     );
 }
 

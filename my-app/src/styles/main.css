@@ -134,7 +134,20 @@
 
 .modal-content {
     background-color: #ffffff;
-    width: 250px;
-    height: 150px;
-    padding: 15px;
+    width: 1500px;
+    height: 800px;
+}
+
+.modal-content-grid {
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1000px 500px;
+    height: 100%;
+}
+
+.modal-content-grid-item {
+    background-color: #fff;
+    /* 그리드 아이템의 배경색 */
+    padding: 20px;
+    /* 내용과 테두리 사이의 간격 */
 }
