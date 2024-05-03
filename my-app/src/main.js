@@ -1,13 +1,16 @@
 /* eslint-disable */
-import { useState } from 'react';
+import React, { useState } from 'react';
 import './styles/main.css';
 import './styles/button.css'
+import ReactModal from 'react-modal';
 import TextInput from './components/TextInput';
 import SearchButton from './components/SearchButton';
 import ItemList from './components/ItemList';
 import PageButton from './components/PageButton';
 
 function Main() {
+    ReactModal.setAppElement('#root');
+
     var maxPage = 20;
 
     const [page, setPage] = useState(1);
