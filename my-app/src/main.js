@@ -1,6 +1,7 @@
 /* eslint-disable */
 import { useState } from 'react';
 import './styles/main.css';
+import './styles/button.css'
 import TextInput from './components/TextInput';
 import SearchButton from './components/SearchButton';
 import ItemList from './components/ItemList';
@@ -46,3 +47,4 @@ function Main() {
 }
 
 export default Main;
+

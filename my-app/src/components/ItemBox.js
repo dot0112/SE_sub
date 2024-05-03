@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import '../styles/main.css';
+import '../styles/item.css';
 import ItemDetail from "./ItemDetail";
 
 function ItemBox({ itemNum }) {
