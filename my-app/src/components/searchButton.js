@@ -5,7 +5,7 @@ import '../styles/main.css';
 function SearchButton({ onClick }) {
     return (
         <button className="searchButton" onClick={onClick}>
-            <img src='/search.png' alt="Search Button" />
+            <img src='/search.png' alt="Search Button" draggable='false' />
         </button>
     );
 }

@@ -9,7 +9,7 @@ function ItemList({ pageNum }) {
     return (
         <div className="grid-container" >
             {items.map(itemNum => (
-                <ItemBox itemNum={itemNum} />
+                <ItemBox itemNum={itemNum} key={itemNum}/>
             ))}
         </div>
     );

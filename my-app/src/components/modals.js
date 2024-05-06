@@ -4,6 +4,7 @@ import { ModalsDispatchContext, ModalsStateContext } from '../features/ModalsCon
 
 export const modals = {
     modal_T: loadable(()=> import('../practice/modal_T')),
+    itemDetail: loadable(()=> import('../components/ItemDetail')),
 };
 
 
@@ -14,6 +15,7 @@ const Modals = () => {
     return openedModals.map((modal, index) => {
         const { Component, props } = modal;
         const {onSubmit, ...restProps} = props;
+        
         const onClose = () => {
             close(Component);
         };

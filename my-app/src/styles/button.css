@@ -12,6 +12,15 @@
     height: 40px;
 }
 
+.searchButton:hover img {
+    transition: filter 0.15s ease;
+    filter: invert(70%);
+}
+
+.searchButton:active img {
+    filter: invert(60%);
+}
+
 .pageButton {
     background: none;
     border: none;

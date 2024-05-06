@@ -12,8 +12,8 @@ const ModalsProvider = ({ children }) => {
      };
     const close = (Component) => {
         setOpenedModals((modals)=>{
-            return modals.filter((modals)=>{
-                return modals.Component !== Component;
+            return modals.filter((modal)=>{
+                return modal.Component !== Component;
             })
         })
      };
@@ -23,7 +23,7 @@ const ModalsProvider = ({ children }) => {
         <ModalsStateContext.Provider value={openedModals}>
             <ModalsDispatchContext.Provider value={dispatch}>  
                 {children}
-                <Modals></Modals>
+                <Modals />
             </ModalsDispatchContext.Provider>
         </ModalsStateContext.Provider>
     );
